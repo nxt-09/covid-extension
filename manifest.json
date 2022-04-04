@@ -1,0 +1,24 @@
+{
+    "name": "COVID-19 [IN]",
+    "description": "Cronavirus numbers for India. Include : Confirmed, Recoveries, Demises.",
+    "version": "2.0.0",
+    "manifest_version": 3,
+    "author": "Nikhil Dixit",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Latest Covid Report"
+    },
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "permissions": [
+        "contextMenus",
+        "notifications",
+        "storage",
+        "tabs",
+        "webNavigation",
+        "webRequest"
+    ]
+}
