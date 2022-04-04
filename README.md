@@ -9,4 +9,6 @@ Chrome Extension presenting India's COVID-19 numbers
 ### **Packages Used** :
 - JQuery.js
 - PapaParse.js
-- 
+
+### **APIs Called** :
+- [InCovid.org](https://api.covid19india.org/data.json)
