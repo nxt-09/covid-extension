@@ -8,6 +8,31 @@
 </head>
 
 <style>
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    a {
+        background:
+            linear-gradient(to right,
+                rgba(100, 200, 200, 1),
+                rgba(100, 200, 200, 1)),
+            linear-gradient(to right,
+                rgba(255, 0, 0, 1),
+                rgba(255, 0, 180, 1),
+                rgba(0, 100, 200, 1));
+        background-size: 100% 3px, 0 3px;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 400ms;
+    }
+
+    a:hover {
+        background-size: 0 3px, 100% 3px;
+    }
+
+
     .content-table {
         border-collapse: collapse;
         margin: 15px 0;
@@ -17,6 +42,8 @@
         min-width: 425px;
         overflow: hidden;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        cursor: default;
+        user-select: none;
     }
 
     .content-table thead tr {
@@ -45,40 +72,58 @@
         background-color: #40c5ab;
         font-weight: bold;
     }
+
+    .content-table tbody tr .hvr:hover {
+        background-color: #d8d8d8;
+        color: rgb(0, 0, 0);
+    }
+
+    .empty {
+        font-size: 0em;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    
 </style>
 
 <body>
+    <div class="empty" id="dly_conf_2"></div>
     <div class="container mt-3" style="width: 450px;">
         <table class="content-table text-center">
             <thead>
                 <tr>
-                    <th class="tab_title" colspan="4">COVID-19 [IN]</th>
+                    <th class="tab_title" colspan="5">COVID-19 [IN]</th>
                 </tr>
                 <tr>
                     <th class="table-info dte">Date</th>
                     <th class="table-info">Confirmed</th>
                     <th class="table-info">Recovered</th>
                     <th class="table-info">Deaths</th>
+                    <th class="table-info">% Change</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td id="dly_date" class="dte"></td>
-                    <td id="dly_conf"></td>
-                    <td id="dly_rec"></td>
-                    <td id="dly_dth"></td>
+                    <td id="dly_conf" class="hvr"></td>
+                    <td id="dly_rec" class="hvr"></td>
+                    <td id="dly_dth" class="hvr"></td>
+                    <td id="pct01" class="hvr"></td>
                 </tr>
                 <tr>
                     <td id="dly_date_1" class="dte"></td>
-                    <td id="dly_conf_1"></td>
-                    <td id="dly_rec_1"></td>
-                    <td id="dly_dth_1"></td>
+                    <td id="dly_conf_1" class="hvr"></td>
+                    <td id="dly_rec_1" class="hvr"></td>
+                    <td id="dly_dth_1" class="hvr"></td>
+                    <td id="pct12" class="hvr"></td>
                 </tr>
                 <tr>
                     <td>Till Date</td>
                     <td id="tot_conf"></td>
                     <td id="tot_rec"></td>
                     <td id="tot_dth"></td>
+                    <td><a href="https://linkedin.com/in/nxt">@nxt_</a></td>
                 </tr>
             </tbody>
         </table>

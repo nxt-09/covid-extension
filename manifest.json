@@ -1,7 +1,7 @@
 {
     "name": "COVID-19 [IN]",
     "description": "Cronavirus numbers for India. Include : Confirmed, Recoveries, Demises.",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "manifest_version": 3,
     "author": "Nikhil Dixit",
     "action": {
